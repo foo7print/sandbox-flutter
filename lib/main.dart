@@ -47,12 +47,15 @@ class _MyHomePageState extends State<MyHomePage> {
           Icon(Icons.share),
         ],
       ),
-      body: Row(
-        children: const <Widget>[
-        Text('あいうえお'),
-        Text('あいうえお'),
-        Text('あいうえお'),
-      ]),
+      body: Padding(
+        padding: const EdgeInsets.all(32.0),
+        child: Row(
+          children: const <Widget>[
+          Text('あいうえお'),
+          Text('あいうえお'),
+          Text('あいうえお'),
+        ]),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
