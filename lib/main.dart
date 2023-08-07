@@ -32,6 +32,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String buttonText = '次へ';
 
   void _incrementCounter() {
     setState(() {
@@ -47,12 +48,14 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: ElevatedButton(
-          child: const Text('次へ'),
-          onPressed: (){
-            Navigator.push(
+          child: Text(buttonText),
+          onPressed: () async {
+            final result = await Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const NextPage()),
+              MaterialPageRoute(builder: (context) => const NextPage('Test Prop')),
             );
+            buttonText = result;
+            print(buttonText);
           },
         ),
       ),
