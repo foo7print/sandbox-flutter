@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 import 'next_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,13 +14,17 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const MyHomePage(title: 'ホーム画面'),
+        '/next': (context) => const NextPage(title: '次の画面'),
+      },
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({super.key, required String this.title});
 
   final String title;
 
@@ -49,10 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ElevatedButton(
           child: const Text('次へ'),
           onPressed: (){
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const NextPage()),
-            );
+            Navigator.pushNamed(context, '/next');
           },
         ),
       ),

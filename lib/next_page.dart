@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NextPage extends StatelessWidget {
-  const NextPage({super.key});
+  const NextPage({super.key, required String title});
 
   @override
   Widget build(BuildContext context) {
