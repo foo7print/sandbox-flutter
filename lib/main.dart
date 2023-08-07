@@ -44,7 +44,12 @@ class _MyHomePageState extends State<MyHomePage> {
         title: const Text('タイトル'),
       ),
       body: Center(
-        child: Container(),
+        child: ElevatedButton(
+          child: const Text('次へ'),
+          onPressed: (){
+            // TODO: ここにボタンを押した時に呼ばれるコードを書く
+          },
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
