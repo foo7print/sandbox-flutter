@@ -48,20 +48,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: Center(
-        child: Column(
-          children: <Widget>[
-            const Text(
-              'テキストテキストテキストテキストテキストテキスト',
-            ),
-            const Text(
-                'あいうえおかきくけこさしすせそ'
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
+        child: Row(
+          children: const <Widget>[
+          Text('あいうえお'),
+          Text('あいうえお'),
+          Text('あいうえお'),
+        ]),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
