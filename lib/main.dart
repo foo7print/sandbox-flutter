@@ -47,14 +47,18 @@ class _MyHomePageState extends State<MyHomePage> {
           Icon(Icons.share),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(32.0),
-        child: Row(
-          children: const <Widget>[
-          Text('あいうえお'),
-          Text('あいうえお'),
-          Text('あいうえお'),
-        ]),
+      body: Container(
+        height: double.infinity,
+        color: Colors.red,
+        child: Padding(
+          padding: const EdgeInsets.all(32.0),
+          child: Row(
+            children: const <Widget>[
+            Text('あいうえお'),
+            Text('あいうえお'),
+            Text('あいうえお'),
+          ]),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
