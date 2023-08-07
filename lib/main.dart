@@ -42,23 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('タイトル'),
-        actions: const <Widget>[
-          Icon(Icons.add),
-          Icon(Icons.share),
-        ],
       ),
-      body: Container(
-        height: double.infinity,
-        color: Colors.red,
-        child: Padding(
-          padding: const EdgeInsets.all(32.0),
-          child: Row(
-            children: const <Widget>[
-            Text('あいうえお'),
-            Text('あいうえお'),
-            Text('あいうえお'),
-          ]),
-        ),
+      body: Center(
+        child: Container(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
