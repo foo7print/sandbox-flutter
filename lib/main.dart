@@ -37,7 +37,19 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          children: [],
+          children: const [
+            Text(
+              'あいうえお',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.green,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+                decoration: TextDecoration.underline,
+              ),
+            ),
+            Text('かきくけこ'),
+          ],
         ),
       ),
     );
