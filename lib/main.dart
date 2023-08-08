@@ -35,20 +35,9 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: const Text('タイトル'),
       ),
-      body: Center(
-        child: Column(
-          children: const [
-            SizedBox(
-              width: double.infinity,
-              child: Text(
-                'あいうえお',
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Text('かきくけこ'),
-          ],
-        ),
-      ),
+      body: Container(
+        width: double.infinity,
+      )
     );
   }
 }
