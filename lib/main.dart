@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'next_page.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -39,29 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          children: [
-            const Icon(
-              Icons.print,
-              size: 100,
-            ),
-            SizedBox(
-              width: 100,
-              child: Image.asset('images/owl-2.jpg', fit: BoxFit.contain),
-            ),
-            SizedBox(
-              width: 100,
-              child: Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
-            ),
-            ElevatedButton(
-              child: const Text('次へ'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const NextPage('Test Prop')),
-                );
-              },
-            ),
-          ],
+          children: [],
         ),
       ),
     );
