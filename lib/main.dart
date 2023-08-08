@@ -43,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
             border: InputBorder.none,
             hintText: 'Enter a search term',
           ),
+          autofocus: true,
         ),
       )
     );
