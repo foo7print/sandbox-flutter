@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +38,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         width: double.infinity,
+        child: const TextField(
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            hintText: 'Enter a search term',
+          ),
+        ),
       )
     );
   }
