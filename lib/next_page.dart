@@ -19,7 +19,7 @@ class NextPage extends StatelessWidget {
             child: ElevatedButton(
               child: const Text('戻る'),
               onPressed: () {
-                Navigator.pop(context, '戻りました');
+                Navigator.pop(context);
               },
             ),
           ),

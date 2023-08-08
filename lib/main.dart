@@ -31,15 +31,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-  String buttonText = '次へ';
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,21 +39,14 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: ElevatedButton(
-          child: Text(buttonText),
-          onPressed: () async {
-            final result = await Navigator.push(
+          child: const Text('次へ'),
+          onPressed: () {
+            Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => const NextPage('Test Prop')),
             );
-            buttonText = result;
-            print(buttonText);
           },
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
