@@ -30,6 +30,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final myFocusNode = FocusNode();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,12 +40,19 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         width: double.infinity,
-        child: const TextField(
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            hintText: 'Enter a search term',
-          ),
-          autofocus: true,
+        child: Column(
+          children: [
+            TextField(),
+            TextField(
+              focusNode: myFocusNode,
+            ),
+            ElevatedButton(
+              child: Text('フォーカス'),
+              onPressed: () {
+                myFocusNode.requestFocus();
+              },
+            ),
+          ],
         ),
       )
     );
