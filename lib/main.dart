@@ -41,26 +41,26 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         width: double.infinity,
         child: ListView(
-          scrollDirection: Axis.horizontal,
+          scrollDirection: Axis.vertical,
           children: [
             Container(
-              width: 160.0,
+              height: 200.0,
               color: Colors.red,
             ),
             Container(
-              width: 160.0,
+              height: 200.0,
               color: Colors.blue,
             ),
             Container(
-              width: 160.0,
+              height: 200.0,
               color: Colors.green,
             ),
             Container(
-              width: 160.0,
+              height: 200.0,
               color: Colors.yellow,
             ),
             Container(
-              width: 160.0,
+              height: 200.0,
               color: Colors.orange,
             ),
           ],
