@@ -30,9 +30,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String name = '';
-  final myController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,41 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         width: double.infinity,
-        child: Column(
-          children: [
-            TextField(
-              decoration: const InputDecoration(
-                hintText: '名前',
-              ),
-              onChanged: (text) {
-                name = text;
-              },
-            ),
-            TextField(
-              controller: myController,
-              decoration: const InputDecoration(
-                hintText: '趣味',
-              ),
-            ),
-            ElevatedButton(
-              child: const Text('新規登録'),
-              onPressed: () {
-                // final hobbyText = myController.text;
-                // print(name);
-                // print(hobbyText);
-                showDialog(
-                  context: context,
-                  builder: (context) {
-                    return AlertDialog(
-                      content: Text(myController.text),
-                    );
-                  },
-                );
-              },
-            ),
-          ],
-        ),
-      )
+      ),
     );
   }
 }
