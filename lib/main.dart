@@ -30,6 +30,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final items = List<String>.generate(10000, (i) => "Item $i");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,21 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         width: double.infinity,
-        child: ListView(
-          children: const <Widget>[
-            ListTile(
-              leading: Icon(Icons.map),
-              title: Text('Map'),
-            ),
-            ListTile(
-              leading: Icon(Icons.photo_album),
-              title: Text('Album'),
-            ),
-            ListTile(
-              leading: Icon(Icons.phone),
-              title: Text('Phone'),
-            )
-          ],
+        child: ListView.builder(
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text(items[index]),
+            );
+          },
         ),
       ),
     );
