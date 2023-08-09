@@ -60,9 +60,17 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               child: const Text('新規登録'),
               onPressed: () {
-                final hobbyText = myController.text;
-                print(name);
-                print(hobbyText);
+                // final hobbyText = myController.text;
+                // print(name);
+                // print(hobbyText);
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      content: Text(myController.text),
+                    );
+                  },
+                );
               },
             ),
           ],
