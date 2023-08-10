@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: const Text('タイトル'),
       ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         child: ListView(
           scrollDirection: Axis.vertical,
